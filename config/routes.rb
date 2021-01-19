@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+
+  namespace :api do
+    get "/songs" => "favorite_songs#index"
+    get "/songs/:id" => "favorite_songs#show"
+    post "/songs" => "favorite_songs#create"
+    patch "/songs/:id" => "favorite_songs#update"
+    delete "/songs/:id" => "favorite_songs#destroy"
+  end
 end
